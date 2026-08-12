@@ -998,5 +998,28 @@ function drawChart(id, data, field, color, yMin, yMax, unit, target) {
 
 window.addEventListener('resize', () => { if (document.getElementById('p-tracker').classList.contains('on')) renderTracker(); });
 </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCcZgBPCDk8gYFSKHmNXPXguaeXfwIhsVw",
+    authDomain: "spidey-tracker-2c062.firebaseapp.com",
+    projectId: "spidey-tracker-2c062",
+    storageBucket: "spidey-tracker-2c062.firebasestorage.app",
+    messagingSenderId: "685651565379",
+    appId: "1:685651565379:web:515628e64f1f1c0d7c6df6",
+    measurementId: "G-N1SZ1GNJ9S"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
